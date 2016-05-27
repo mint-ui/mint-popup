@@ -1,0 +1,25 @@
+{
+  "name": "mint-popup",
+  "version": "0.0.1",
+  "description": "A mobile popup component for vue.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "watch": "cooking watch -c cooking.conf.js,cooking.example.conf.js",
+    "build": "cooking build",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mint-ui/mint-popup.git"
+  },
+  "author": "yi.shyang@ele.me",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "vue-popup": "^0.1.6"
+  },
+  "bugs": {
+    "url": "https://github.com/mint-ui/mint-popup/issues"
+  },
+  "homepage": "https://github.com/mint-ui/mint-popup#readme"
+}
