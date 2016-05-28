@@ -110,11 +110,6 @@
       position: {
         type: String,
         default: ''
-      },
-
-      customClass: {
-        type: String,
-        default: ''
       }
     },
 
