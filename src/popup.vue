@@ -11,14 +11,14 @@
       background: #fff;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate3d(-50%, -50%, 0);
 
       @descendent top {
         top: 0;
         right: auto;
         bottom: auto;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate3d(-50%, 0, 0);
       }
 
       @descendent right {
@@ -26,7 +26,7 @@
         right: 0;
         bottom: auto;
         left: auto;
-        transform: translate(0, -50%);
+        transform: translate3d(0, -50%, 0);
       }
 
       @descendent bottom {
@@ -34,7 +34,7 @@
         right: auto;
         bottom: 0;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate3d(-50%, 0, 0);
       }
 
       @descendent left {
@@ -42,7 +42,7 @@
         right: auto;
         bottom: auto;
         left: 0;
-        transform: translate(0, -50%);
+        transform: translate3d(0, -50%, 0);
       }
     }
   }
@@ -56,22 +56,22 @@
 
   .popup-slide-top-enter,
   .popup-slide-top-leave {
-    transform: translate(-50%, -100%);
+    transform: translate3d(-50%, -100%, 0);
   }
 
   .popup-slide-right-enter,
   .popup-slide-right-leave {
-    transform: translate(100%, -50%);
+    transform: translate3d(100%, -50%, 0);
   }
 
   .popup-slide-bottom-enter,
   .popup-slide-bottom-leave {
-    transform: translate(-50%, 100%);
+    transform: translate3d(-50%, 100%, 0);
   }
 
   .popup-slide-left-enter,
   .popup-slide-left-leave {
-    transform: translate(-100%, -50%);
+    transform: translate3d(-100%, -50%, 0);
   }
 
   .popup-fade-transition {
