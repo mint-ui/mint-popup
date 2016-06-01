@@ -1,6 +1,6 @@
 {
   "name": "mint-popup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A mobile popup component for vue.js",
   "main": "lib/index.js",
   "scripts": {
