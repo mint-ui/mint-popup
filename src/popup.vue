@@ -12,6 +12,7 @@
       top: 50%;
       left: 50%;
       transform: translate3d(-50%, -50%, 0);
+      backface-visibility: hidden;
 
       @descendent top {
         top: 0;
@@ -51,7 +52,7 @@
   .popup-slide-right-transition,
   .popup-slide-bottom-transition,
   .popup-slide-left-transition {
-    transition: transform .3s ease-out;
+    transition: transform .3s ease-out 100ms;
   }
 
   .popup-slide-top-enter,

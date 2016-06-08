@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "vue-popup": "^0.1.6"
+    "vue-popup": "^0.1.7"
   },
   "bugs": {
     "url": "https://github.com/mint-ui/mint-popup/issues"
