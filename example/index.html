@@ -63,27 +63,29 @@
   <title>mint-popup example</title>
 </head>
 <body>
-<button @click="popupVisible1 = true">open a popup(center)</button>
-<button @click="popupVisible2 = true">open a popup(top)</button>
-<button @click="popupVisible3 = true">open a popup(right)</button>
-<button @click="popupVisible4 = true">open a popup(bottom)</button>
-<button @click="popupVisible5 = true">open a popup(left)</button>
-<popup :visible.sync="popupVisible1" popup-transition="popup-fade" class="mint-popup-1">
-  <p>This is a popup</p>
-</popup>
-<popup :visible.sync="popupVisible2" position="top" class="mint-popup-2">
-  <p>This is a popup</p>
-</popup>
-<popup :visible.sync="popupVisible3" position="right" class="mint-popup-3">
-  <p>This is a popup</p>
-</popup>
-<popup :visible.sync="popupVisible4" position="bottom" class="mint-popup-4">
-  <p>This is a popup</p>
-</popup>
-<popup :visible.sync="popupVisible5" position="left" class="mint-popup-5">
-  <p>This is a popup</p>
-</popup>
-<script src="./vue.js"></script>
+<div id="wrapper">
+  <button @click="popupVisible1 = true">open a popup(center)</button>
+  <button @click="popupVisible2 = true">open a popup(top)</button>
+  <button @click="popupVisible3 = true">open a popup(right)</button>
+  <button @click="popupVisible4 = true">open a popup(bottom)</button>
+  <button @click="popupVisible5 = true">open a popup(left)</button>
+  <popup v-model="popupVisible1" popup-transition="popup-fade" class="mint-popup-1">
+    <p>This is a popup</p>
+  </popup>
+  <popup v-model="popupVisible2" position="top" class="mint-popup-2">
+    <p>This is a popup</p>
+  </popup>
+  <popup v-model="popupVisible3" position="right" class="mint-popup-3">
+    <p>This is a popup</p>
+  </popup>
+  <popup v-model="popupVisible4" position="bottom" class="mint-popup-4">
+    <p>This is a popup</p>
+  </popup>
+  <popup v-model="popupVisible5" position="left" class="mint-popup-5">
+    <p>This is a popup</p>
+  </popup>
+</div>
+<script src="../node_modules/vue/dist/vue.js"></script>
 <script src="./dist/build.js"></script>
 </body>
 </html>

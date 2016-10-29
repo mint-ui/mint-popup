@@ -1,6 +1,6 @@
 import Popup from '../src';
 new Vue({
-  el: 'body',
+  el: '#wrapper',
   components: {
     'popup': Popup
   },
@@ -13,8 +13,5 @@ new Vue({
       popupVisible4: false,
       popupVisible5: false
     };
-  },
-
-  methods: {
   }
 });

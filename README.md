@@ -23,26 +23,42 @@ Register component:
 Vue.component('popup', Popup);
 ```
 
-Then use it:
+# Example
+
+`position` defines the location of the popup. If it's `bottom`, when you switch on the popup, it'll slide into the screen from the bottom and become fixed at the bottom. The sliding animation alters with `position`, and you don't need to configure it manually.
+
+Bind `v-model` with one of your vue instance variables. Toggle it to switch on/off the popup.
+
 ```html
-<popup :visible.sync="popupVisible" position="bottom"></popup>
+<mt-popup
+  v-model="popupVisible"
+  position="bottom">
+  ...
+</mt-popup>
 ```
 
-# Usage
-`position` defines the location of the popup. If it's `bottom`, when you switch on the popup, it'll slide into the screen from the bottom and become fixed at the bottom.
+If the `position` attribute is omitted, the popup will be located at the center of the viewport (and of course you can relocate it using CSS). In this case, you may want to set its popup-transition attribute to `popup-fade` so that it'll have a fading effect when switched on/off.
 
-If the `position` attribute is omitted, the popup will be located at the center of the viewport (and of course you can relocate it using CSS). In this case, you may want to set its `popup-transition` attribute to `popup-fade` so that it'll have a fading effect when switched on/off.
-
-Sync `visible` with one of your vue instance variables. Toggle it to switch on/off the popup.
+```html
+<mt-popup
+  v-model="popupVisible"
+  popup-transition="popup-fade">
+  ...
+</mt-popup>
+```
 
 # API
-| Option            | Description                                                 | Value                         | Default       |
-|-------------------|-------------------------------------------------------------|-------------------------------|---------------|
-| visible           | visibility of the popup                                     | Boolean                       | 'false'       |
-| position          | location of the popup                                       | 'top' 'right' 'bottom' 'left' |               |
-| pop-transition    | CSS transition of the popup                                 | 'popup-fade' 'popup-slide'    | 'popup-slide' |
-| modal             | determines if a modal pops with the popup                   | Boolean                       | true          | 
-| closeOnClickModal | determines if the popup turns off when the modal is clicked | Boolean                       | true          |
+| option | description | type | acceptable values | default |
+|------|-------|---------|-------|--------|
+| position | location of the popup. If omitted, the popup will be centered  | String | 'top'<br>'right'<br>'bottom'<br>'left' | |
+| pop-transition | CSS transition of the popup. Configurable only when `position` is omitted | String | 'popup-fade' | |
+| modal | if a modal pops with the popup | Boolean | | true |
+| closeOnClickModal | if the popup turns off when the modal is clicked | Boolean | | true |
+
+# Slot
+| name | description |
+|------|--------|
+| - | content of the popup |
 
 # License
 MIT

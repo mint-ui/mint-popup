@@ -14,9 +14,12 @@
   },
   "author": "yi.shyang@ele.me",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "cooking-vue2": "^0.2.3",
+    "vue": "^2.0.3"
+  },
   "dependencies": {
-    "vue-popup": "^0.1.7"
+    "vue-popup": "^0.2.9"
   },
   "bugs": {
     "url": "https://github.com/mint-ui/mint-popup/issues"
